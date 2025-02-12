@@ -59,13 +59,18 @@ print(list(range(1, 11)))
 # reversely sorted array
 print(list(range(10, 0, -1)))
 
-# increment size of input by 20
+# increment size of input by 5
 x = 0
 for i in range(5, 105, 5):
     print(i)
     x += 1
 print(x)
 
+# list input sizes
 x_values = list(range(5, 105, 5))
 print(x_values)
 print(len(x_values))
+
+bb_srt_best = []
+bb_srt_avg = []
+bb_srt_worst = []
