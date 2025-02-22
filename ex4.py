@@ -47,7 +47,7 @@ if __name__ == "__main__":
     x_interp = np.linspace(np.min(list_lengths), np.max(list_lengths), 50)
     y_quadratic = interp1d(list_lengths, averages, kind="quadratic")
     ax.plot(x_interp, y_quadratic(x_interp), 'k', c='r', label="fitted curve")
-    ax.scatter(list_lengths, averages, label="raw data")
+    ax.scatter(list_lengths, averages, c='b', label="raw data")
     ax.set_title('Quick Sort')
     ax.set_ylabel('time')
     ax.set_xlabel('list Length')
