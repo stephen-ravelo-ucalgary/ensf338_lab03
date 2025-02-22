@@ -40,3 +40,6 @@ def merge_sort(arr, low, high):
         merge(arr, low, mid, high)
 
 if __name__ == "__main__":
+    arr = [8, 42, 25, 3, 3, 2, 27, 3]
+    merge_sort(arr, 0, len(arr) - 1)
+    print(arr)
