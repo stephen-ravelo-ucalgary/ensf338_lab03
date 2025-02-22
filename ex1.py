@@ -1,15 +1,17 @@
 def merge(arr, low, mid, high):
+    # Get length of left and right arrays
     l_length = mid - low + 1
     r_length = high - mid
 
+    # Allocate two new arrays and fill them with their respective elements
     left_arr = [0] * l_length
     right_arr = [0] * r_length
-
     for i in range(l_length):
         left_arr[i] = arr[low + i]
     for i in range(r_length):
         right_arr[i] = arr[mid + i + 1]
 
+    # Fill original array in sorted order until we reach the end of one sub-array
     i = 0
     j = 0
     k = low
@@ -22,11 +24,11 @@ def merge(arr, low, mid, high):
             j += 1
         k += 1
     
+    # Insert remaining elements
     while i < l_length:
         arr[k] = left_arr[i]
         i += 1
         k += 1
-    
     while j < r_length:
         arr[k] = right_arr[j]
         j += 1
